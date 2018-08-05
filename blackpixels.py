@@ -6,7 +6,6 @@ from matplotlib import pyplot as plt
 sys.setrecursionlimit(1500000)
 src = cv2.imread('imgnew.jpg', 0)
 
-print(type(src))
 arr=numpy.ndarray.tolist(src)
 bp=[]
 l1=[]
@@ -19,7 +18,7 @@ for i in range(len(arr)):
     bp.append(count)
 f=open("bpinrow.txt", "w")
 for i in range(len(bp)):
-    if bp[i]<1:
+    if bp[i]<50:
         l1.append(numpy.ndarray.tolist(src[i:i+1][0]))
     f.write("Row " + str(i) + ": " + str(bp[i]) + "\n")
 f.close()
