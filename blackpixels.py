@@ -23,8 +23,6 @@ for i in range(len(bp)):
     f.write("Row " + str(i) + ": " + str(bp[i]) + "\n")
 f.close()
 arr1=numpy.array(l1)
+plt.Axes.set_facecolor(color="#fff")
 plt.imshow(arr1, interpolation='None')
 plt.show()
-
-
-
