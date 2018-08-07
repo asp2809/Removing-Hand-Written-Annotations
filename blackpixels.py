@@ -1,10 +1,11 @@
 import cv2
 import numpy
 import sys
+from scipy.misc import toimage
 from matplotlib import pyplot as plt
-
+from PIL import Image
 sys.setrecursionlimit(1500000)
-src = cv2.imread('imgnew.jpg', 0)
+src = cv2.imread('imgbin.jpg', 0)
 
 arr=numpy.ndarray.tolist(src)
 bp=[]
@@ -23,6 +24,17 @@ for i in range(len(bp)):
     f.write("Row " + str(i) + ": " + str(bp[i]) + "\n")
 f.close()
 arr1=numpy.array(l1)
+<<<<<<< HEAD
 plt.Axes.set_facecolor(color="#fff")
 plt.imshow(arr1, interpolation='None')
 plt.show()
+=======
+
+plt.imshow(arr1, interpolation='None')
+plt.show()
+plt.savefig("imageblk.jpg",dpi = 500)
+
+
+img = toimage(arr1)
+img.save("annotations.png")
+>>>>>>> 459f6255daaac076562e04a81142950517c7188d
