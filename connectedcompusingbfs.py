@@ -1,13 +1,15 @@
 import cv2
 import numpy
 import sys
+from matplotlib import pyplot as plt
+from scipy.misc import toimage
 
 sys.setrecursionlimit(1500000)
 
 height=0
 width=0
 
-src = cv2.imread('imgnew.jpg', 0)
+src = cv2.imread('annotations.png', 0)
 arr=numpy.ndarray.tolist(src)
 
 pixel_dim=0.25
@@ -44,6 +46,15 @@ for i in range(len(arr)):
             search(i, j)
             h.append(height)
             w.append(width)
+            print(h[len(h)-1])
+            print(w[len(h)-1]+0.25)
+            if h[len(h)-1]<20.0 or w[len(h)-1]>1.5:
+                l=h[len(h)-1]/0.25
+                r=(w[len(h)-1]/0.25)+1
+                if i+l<len(arr) and j+r<len(arr[i]):
+                    for k in range(int(l)):
+                        for z in range(int(r)):
+                            arr[i+k][j+z]=255
     
 handw=""
 
@@ -54,3 +65,10 @@ for i in range(len(h)):
 f=open("heightandwidth.txt", "w")
 f.write(handw)
 f.close()
+
+arr2=numpy.array(arr)
+plt.imshow(arr2, interpolation='None')
+plt.show()
+
+img = toimage(arr2)
+img.save("annotations1.png")
