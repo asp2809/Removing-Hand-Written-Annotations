@@ -33,4 +33,7 @@ Repository for the project of removing hand-written annotations from scanned doc
 ### Output of connectedcompusingbfs.py
 <img src="annotations1.png">
 
-* After this, using <a href="smoothing.py">smoothing.py</a>, we have joined the broken lines using a slab of array in for which we are calculating the sum of the pixel values and then using a threshold to fill the gaps between the lines.
+* After this, using <a href="smoothing.py">smoothing.py</a>, we have joined the broken lines using a slab of array for which we are calculating the sum of the pixel values and then using a threshold above which if the summation value goes, then the complete slab is filled with black pixels.
+
+### Output after Smoothening using smoothing.py
+<img src="smoothen.png">
