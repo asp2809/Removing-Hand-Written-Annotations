@@ -25,3 +25,12 @@ Repository for the project of removing hand-written annotations from scanned doc
 
 ### Image containing the Annotations and the Blank Spaces between the Lines
 <img src="annotations.png">
+
+## Task-4: Smoothening of the Annnotations retrieved from the Document
+
+* We are using the <a href="connectedcompusingbfs.py">connectedcompusingbfs.py</a> to find the lengths and widths of the connected components in the <a href="annotations.png">annotations.png</a>. Then, the annotations which have the lengths greater than a given threshold and then extracting the selected ones only.
+
+### Output of connectedcompusingbfs.py
+<img src="annotations1.png">
+
+* After this, using <a href="smoothing.py">smoothing.py</a>, we have joined the broken lines using a slab of array in for which we are calculating the sum of the pixel values and then using a threshold to fill the gaps between the lines.
