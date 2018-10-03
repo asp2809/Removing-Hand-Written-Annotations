@@ -34,4 +34,3 @@ plt.savefig("imageblk.jpg",dpi = 500)
 
 img = toimage(arr1)
 img.save("annotations.png")
-

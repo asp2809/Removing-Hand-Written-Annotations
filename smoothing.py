@@ -24,10 +24,10 @@ while(i<len(arr)):
                 for k in range(len(arr3)):
                     for l in range(len(arr3[k])):
                         arr[i+k][j+l]=0
-            # else:
-            #     for k in range(len(arr3)):
-            #         for l in range(len(arr3[k])):
-            #             arr[i+k][j+l]=255
+            else:
+                for k in range(len(arr3)):
+                    for l in range(len(arr3[k])):
+                        arr[i+k][j+l]=255
         print(len(arr3[k]))
         j+=len(arr3[k])
     print(len(arr3))
