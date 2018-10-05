@@ -37,3 +37,7 @@ Repository for the project of removing hand-written annotations from scanned doc
 
 ### Output after Smoothening using smoothing.py
 <img src="smoothen.png">
+
+## Task-5: Change in approach to get better Output
+
+* As the output of the previous approach didn't give us the expected accuracy, we tried another approach by taking a seed of 8 pixels and finding the seeds in the image and then extending the seeds to the left and the right to get the desired annotations in the file <a href="binimage.png">binimage.png</a> using <a href="seedfind.py">seedfind.py</a>.
