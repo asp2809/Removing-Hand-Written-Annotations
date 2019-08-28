@@ -1,7 +1,7 @@
 # Removing Hand-Written Annotations
 
 The Project consists of mainly three sections:
-- <a href="/Underline-Removal">Underline</a>
+- <a href="/Underline-Removal">Underline Removal</a>
 - <a href="/Strikethrough-Removal">Strike-through Removal</a>
 - <a href="/Text Correction">Text Correction</a>
 
